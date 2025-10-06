@@ -1,0 +1,78 @@
+{
+  "dice_keep_strategies": {
+    "11111": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 1s - Yum!"
+    },
+    "22222": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 2s - Yum!"
+    },
+    "33333": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 3s - Yum!"
+    },
+    "44444": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 4s - Yum!"
+    },
+    "55555": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 5s - Yum!"
+    },
+    "66666": {
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "Five 6s - Yum!"
+    }
+  },
+  "category_priorities": {
+    "yum": 10,
+    "full_house": 8,
+    "high_straight": 7,
+    "low_straight": 6,
+    "high_score": 5,
+    "sixes": 4,
+    "fives": 3,
+    "fours": 2,
+    "threes": 1,
+    "twos": 1,
+    "ones": 1,
+    "low_score": 1
+  }
+}

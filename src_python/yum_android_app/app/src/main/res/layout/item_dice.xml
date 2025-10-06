@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/dice_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/diceValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/keepIndicator"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="2dp"
+        android:background="@drawable/keep_indicator"
+        android:gravity="center"
+        android:text="K"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</FrameLayout>

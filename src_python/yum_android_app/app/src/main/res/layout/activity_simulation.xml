@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".SimulationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎯 Yum Bot Simulation"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Run multiple games to test bot performance and get detailed statistics"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Configuration Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/scorecard_item_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simulation Settings"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_blue"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Number of Games -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number of Games:"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/numGamesInput"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="100"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Number of Players -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number of Players:"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/numPlayersInput"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="1"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Bot Type -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bot Type:"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/botTypeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Start Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/startSimulationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Simulation"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/primary_blue" />
+
+            </LinearLayout>
+
+            <!-- Progress Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0"
+                    android:max="100" />
+
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Running simulation..."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_green"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- Results Section -->
+            <LinearLayout
+                android:id="@+id/resultsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/scorecard_item_background"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <!-- Results will be dynamically added here -->
+
+            </LinearLayout>
+
+            <!-- Results RecyclerView (for detailed game results if needed) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resultsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

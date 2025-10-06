@@ -1,0 +1,8 @@
+**/target/*
+src_python/venv_src/
+**/gradle/*
+**/.gradle/*
+**/build/
+**/__pycache__/*
+*.pkl
+*.npy

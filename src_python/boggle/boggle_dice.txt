@@ -1,0 +1,91 @@
+8x8 Boggle Dice Set
+===================
+
+UNIQUE DICE DESIGNS (to manufacture):
+----------------------------------------
+Design  1: C | I | M | O | T | U (make 4 dice)
+Design  2: A | A | E | E | G | N (make 4 dice)
+Design  3: E | E | F | H | I | Y (make 4 dice)
+Design  4: * | H | I | M | N | QU (make 4 dice)
+Design  5: B | F | I | O | R | X (make 4 dice)
+Design  6: E | I | O | S | S | T (make 4 dice)
+Design  7: D | E | L | R | V | Y (make 4 dice)
+Design  8: E | L | R | T | T | Y (make 4 dice)
+Design  9: A | B | B | J | O | O (make 4 dice)
+Design 10: D | E | N | O | S | W (make 4 dice)
+Design 11: D | I | S | T | T | Y (make 4 dice)
+Design 12: A | O | O | T | T | W (make 4 dice)
+Design 13: E | H | R | T | V | W (make 4 dice)
+Design 14: A | C | H | O | P | S (make 4 dice)
+Design 15: A | D | E | N | N | S (make 4 dice)
+Design 16: * | K | L | P | U | Z (make 4 dice)
+
+TOTAL: 16 unique designs, 64 total dice
+
+==================================================
+COMPLETE DICE LIST:
+--------------------
+Die  1: C | I | M | O | T | U
+Die  2: A | A | E | E | G | N
+Die  3: C | I | M | O | T | U
+Die  4: E | E | F | H | I | Y
+Die  5: H | I | M | N | QU | *
+Die  6: B | I | F | O | R | X
+Die  7: E | I | O | S | S | T
+Die  8: H | I | M | N | QU | *
+Die  9: E | E | F | H | I | Y
+Die 10: D | E | L | R | V | Y
+Die 11: E | L | R | T | T | Y
+Die 12: A | B | B | J | O | O
+Die 13: E | L | R | T | T | Y
+Die 14: A | A | E | E | G | N
+Die 15: D | E | N | O | W | S
+Die 16: D | I | S | T | T | Y
+Die 17: A | O | O | T | T | W
+Die 18: E | H | R | T | V | W
+Die 19: D | E | N | O | W | S
+Die 20: E | L | R | T | T | Y
+Die 21: C | I | M | O | T | U
+Die 22: A | C | H | O | P | S
+Die 23: A | B | B | J | O | O
+Die 24: A | O | O | T | T | W
+Die 25: E | H | R | T | V | W
+Die 26: D | E | L | R | V | Y
+Die 27: E | E | F | H | I | Y
+Die 28: D | E | N | O | W | S
+Die 29: B | I | F | O | R | X
+Die 30: D | E | L | R | V | Y
+Die 31: A | A | E | E | G | N
+Die 32: A | D | E | N | N | S
+Die 33: K | L | P | U | Z | *
+Die 34: A | B | B | J | O | O
+Die 35: E | E | F | H | I | Y
+Die 36: E | I | O | S | S | T
+Die 37: D | I | S | T | T | Y
+Die 38: E | I | O | S | S | T
+Die 39: A | O | O | T | T | W
+Die 40: D | I | S | T | T | Y
+Die 41: A | C | H | O | P | S
+Die 42: A | C | H | O | P | S
+Die 43: C | I | M | O | T | U
+Die 44: B | I | F | O | R | X
+Die 45: A | B | B | J | O | O
+Die 46: K | L | P | U | Z | *
+Die 47: A | D | E | N | N | S
+Die 48: A | O | O | T | T | W
+Die 49: E | I | O | S | S | T
+Die 50: E | L | R | T | T | Y
+Die 51: A | C | H | O | P | S
+Die 52: K | L | P | U | Z | *
+Die 53: D | I | S | T | T | Y
+Die 54: H | I | M | N | QU | *
+Die 55: E | H | R | T | V | W
+Die 56: K | L | P | U | Z | *
+Die 57: H | I | M | N | QU | *
+Die 58: A | D | E | N | N | S
+Die 59: D | E | N | O | W | S
+Die 60: E | H | R | T | V | W
+Die 61: A | D | E | N | N | S
+Die 62: D | E | L | R | V | Y
+Die 63: A | A | E | E | G | N
+Die 64: B | I | F | O | R | X

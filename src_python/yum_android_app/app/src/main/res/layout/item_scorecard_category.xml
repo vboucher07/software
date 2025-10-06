@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/scorecard_item_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Ones"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/categoryScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_blue"
+        android:minWidth="48dp"
+        android:gravity="end" />
+
+</LinearLayout>

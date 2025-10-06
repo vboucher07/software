@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Game Header -->
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Current Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/your_turn"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gameTitle" />
+
+        <!-- Dice Section -->
+        <LinearLayout
+            android:id="@+id/diceSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/dice_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dice_values"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap dice to keep/release them"
+                android:textSize="12sp"
+                android:textColor="@color/secondary_green"
+                android:layout_marginTop="4dp" />
+
+            <!-- Dice Container -->
+            <LinearLayout
+                android:id="@+id/diceContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <!-- Dice Input (for manual mode) -->
+            <LinearLayout
+                android:id="@+id/diceInputSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_dice"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/dice1Input"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:hint="1"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@color/white" />
+
+                    <EditText
+                        android:id="@+id/dice2Input"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:hint="2"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@color/white" />
+
+                    <EditText
+                        android:id="@+id/dice3Input"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:hint="3"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@color/white" />
+
+                    <EditText
+                        android:id="@+id/dice4Input"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:hint="4"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@color/white" />
+
+                    <EditText
+                        android:id="@+id/dice5Input"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="5"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submitDiceButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/submit_dice"
+                    android:backgroundTint="@color/primary_blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/diceSection">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rollDiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/roll_dice"
+                android:backgroundTint="@color/secondary_green" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/manualInputButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manual Input"
+                android:backgroundTint="@color/primary_blue" />
+
+        </LinearLayout>
+
+        <!-- Bot Suggestion -->
+        <LinearLayout
+            android:id="@+id/botSuggestionSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/bot_suggestion"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionButtons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bot_suggestion"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue" />
+
+            <TextView
+                android:id="@+id/botSuggestionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggleBotButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Using: Neural Bot (1mil_test.pkl)"
+                android:textSize="12sp"
+                android:backgroundTint="@color/secondary_green" />
+
+        </LinearLayout>
+
+        <!-- Scorecard -->
+        <LinearLayout
+            android:id="@+id/scorecardSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/scorecard_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botSuggestionSection">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scorecard"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue" />
+
+            <!-- Upper Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Upper Section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upperSectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/dice_border" />
+
+            <!-- Lower Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Lower Section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lowerSectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <!-- Total Score -->
+            <TextView
+                android:id="@+id/totalScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:text="Total: 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue" />
+
+        </LinearLayout>
+
+        <!-- Game Control Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scorecardSection">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newGameButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_game"
+                android:backgroundTint="@color/primary_blue" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

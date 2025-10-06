@@ -1,0 +1,73 @@
+{
+  "model_type": "yum_neural_bot",
+  "version": "1.0",
+  "description": "Exported 1mil_test.pkl neural network for Android",
+  "objective": "win",
+  "ruleset": "yum",
+  "input_size": 20,
+  "num_categories": 12,
+  "num_dice": 5,
+  "network_architecture": {
+    "main_network": {
+      "layers": [
+        {
+          "type": "linear",
+          "size": 128
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "linear",
+          "size": 256
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "linear",
+          "size": 128
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "output",
+          "value_size": 1,
+          "action_size": 32
+        }
+      ]
+    },
+    "strategy_network": {
+      "layers": [
+        {
+          "type": "linear",
+          "size": 64
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "linear",
+          "size": 128
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "linear",
+          "size": 64
+        },
+        {
+          "type": "relu"
+        },
+        {
+          "type": "output",
+          "size": 12
+        }
+      ]
+    }
+  },
+  "weights": {},
+  "strategy_weights": {}
+}

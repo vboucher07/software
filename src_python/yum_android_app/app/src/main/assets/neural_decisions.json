@@ -1,0 +1,89 @@
+{
+  "high_priority_patterns": {
+    "yum_potential": {
+      "four_of_kind": {
+        "priority": 95,
+        "explanation": "Go for Yum with 4 of a kind"
+      },
+      "three_of_kind": {
+        "priority": 70,
+        "explanation": "Consider Yum with 3 of a kind"
+      },
+      "pair": {
+        "priority": 30,
+        "explanation": "Low Yum potential with just a pair"
+      }
+    },
+    "straight_potential": {
+      "four_consecutive": {
+        "priority": 85,
+        "explanation": "Very likely straight completion"
+      },
+      "three_consecutive": {
+        "priority": 60,
+        "explanation": "Good straight potential"
+      },
+      "two_consecutive": {
+        "priority": 25,
+        "explanation": "Marginal straight potential"
+      }
+    },
+    "full_house_potential": {
+      "three_and_pair": {
+        "priority": 90,
+        "explanation": "Full house ready"
+      },
+      "three_only": {
+        "priority": 50,
+        "explanation": "Need pair for full house"
+      },
+      "two_pairs": {
+        "priority": 40,
+        "explanation": "Need three of a kind"
+      }
+    }
+  },
+  "category_scoring_thresholds": {
+    "ones": 3,
+    "twos": 6,
+    "threes": 9,
+    "fours": 12,
+    "fives": 15,
+    "sixes": 18,
+    "low_score": 18,
+    "high_score": 22,
+    "low_straight": 15,
+    "high_straight": 20,
+    "full_house": 25,
+    "yum": 30
+  },
+  "endgame_strategy": {
+    "categories_left_threshold": 3,
+    "force_upper_bonus": {
+      "threshold": 50,
+      "priority_boost": 20
+    },
+    "avoid_zero": {
+      "penalty": -10,
+      "explanation": "Avoid taking 0 points when possible"
+    }
+  },
+  "dice_keeping_patterns": {
+    "keep_all_same": {
+      "min_count": 2,
+      "priority": 80
+    },
+    "keep_for_straight": {
+      "consecutive_needed": 3,
+      "priority": 70
+    },
+    "keep_high_values": {
+      "threshold": 4,
+      "priority": 40
+    },
+    "keep_for_full_house": {
+      "three_of_kind_priority": 85,
+      "pair_priority": 60
+    }
+  }
+}
