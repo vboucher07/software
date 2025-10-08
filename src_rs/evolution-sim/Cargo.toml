@@ -1,0 +1,21 @@
+[package]
+name = "evolution-sim"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hecs = "0.10.5"
+rand = "0.9.2"
+eframe = "0.29"
+egui = "0.29"
+egui_plot = "0.29"
+
+[profile.release]
+opt-level = 2
+lto = false
+codegen-units = 16
+panic = "abort"
+warnings-as-errors = true
+
+[profile.dev]
+opt-level = 1
